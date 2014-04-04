@@ -1,0 +1,32 @@
+<html>
+
+<head>
+<title>tryjs</title>
+<style>
+p {
+    font-size: 14px;
+}
+</style>
+<script type="text/javascript">
+function displayDate() {
+    dd = new Date();
+    datetime = dd.toLocaleDateString() + " " + dd.toLocaleTimeString();
+    document.form1.input1.value = datetime;
+    datetimep = document.getElementById("datetimep");
+    datetimep.innerHTML = "はろー<br>" + datetime;
+    window.setTimeout("displayDate()", 1000);
+}
+</script>
+</head>
+
+<body onload="displayDate()">
+
+<form name="form1" action="#">
+    <input type="text" name="input1" size="50">
+</form>
+
+<p id="datetimep"></p>
+
+</body>
+
+</html>
